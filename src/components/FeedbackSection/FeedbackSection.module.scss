@@ -1,0 +1,245 @@
+.section {
+  background-color: #24252E;
+  padding: 80px 0;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center; 
+  gap: 30px;
+}
+
+.feedbackIcon {
+  display: none; 
+}
+
+.colon {
+  display: inline;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 15px; 
+}
+
+.inputsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 75px; 
+}
+
+%sharedInput {
+  background: transparent;
+  border: 1px solid #4B4D5D;
+  border-radius: 8px;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+
+  &::placeholder {
+    color: transparent; 
+  }
+}
+
+.input {
+  @extend %sharedInput;
+}
+
+.textarea {
+  @extend %sharedInput;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.staticLabel {
+  position: absolute;
+  top: -10px; 
+  left: 12px;
+  font-size: 12px;
+  color: #9AA0AB;
+  background-color: #24252E; 
+  padding: 0 5px;
+  pointer-events: none; 
+  transition: color 0.2s ease; 
+}
+
+.input:focus ~ .staticLabel,
+.textarea:focus ~ .staticLabel {
+  color: #2D36F0;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #2D36F0;
+}
+
+.errorText {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block; 
+}
+
+.successText {
+  color: #4caf50;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footerForm {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 5px;
+  gap: 35px; 
+}
+
+.desktopAgreement {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #EFF3FF;
+  align-self: flex-start; 
+}
+
+.mobileAgreement {
+  display: none; 
+}
+
+.customCheckbox {
+  appearance: none; 
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #4B4D5D;
+  border-radius: 4px;
+  background-color: #24252E; 
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+
+  &:checked {
+    background-color: #2D36F0; 
+    border-color: #2D36F0;
+  }
+
+  &:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}
+
+.submitBtn {
+  background-color: #2D36F0;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background-color: #4B4D5D;
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .titleWrapper {
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+  }
+
+  .feedbackIcon {
+    display: block; 
+  }
+
+  .colon {
+    display: none;
+  }
+
+  .inputsGrid {
+    grid-template-columns: 1fr; 
+  }
+
+  .staticLabel {
+    display: none;
+  }
+
+  .input::placeholder,
+  .textarea::placeholder {
+    color: #9AA0AB;
+  }
+
+  .footerForm {
+    gap: 15px;
+  }
+
+  .desktopAgreement {
+    display: none; 
+  }
+
+  .mobileAgreement {
+    display: block; 
+    font-size: 12px;
+    color: #9AA0AB;
+    text-align: center;
+    line-height: 1.4;
+    order: 2; 
+  }
+
+  .submitBtn {
+    width: 100%;
+    order: 1; 
+  }
+}
