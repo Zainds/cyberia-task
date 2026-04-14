@@ -5,6 +5,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import Image from 'next/image';
 import styles from './FeedbackSection.module.scss';
 import { apiClient, ApiError } from '../../shared/api/client';
+import feedbackSvg from "../../../public/feedback.svg"
 
 interface IFeedbackForm {
   name: string;
@@ -62,7 +63,7 @@ export default function FeedbackSection() {
         <div className={styles.content}>
           <div className={styles.titleWrapper}>
             <Image
-              src="/feedback.svg"
+              src={feedbackSvg}
               alt="Feedback Icon"
               width={85}
               height={85}

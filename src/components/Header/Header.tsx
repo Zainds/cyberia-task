@@ -5,6 +5,7 @@ import Link from "next/link";
 import clsx from "clsx"; 
 import styles from "./Header.module.scss";
 import Image from "next/image";
+import logoSvg from "../../../public/logo.svg"
 
 const NAV_LINKS = [
   { label: "Агентство", href: "#" },
@@ -26,7 +27,7 @@ export default function Header() {
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/logo.svg"
+            src={logoSvg}
             alt="Cyberia"
             width={130} 
             height={30}
