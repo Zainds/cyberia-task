@@ -4,6 +4,8 @@ A responsive frontend application designed as an adaptive landing page.
 
 Built on a modern stack including **Next.js (App Router)**, **Zustand** for state management, and **SCSS Modules** for isolated styling.
 
+⚡ [Live Preview](https://zainds.github.io/cyberia-task/) ⚡
+
 ## How to Run
 
 **Prerequisites:**
