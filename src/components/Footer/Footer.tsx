@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 import Image from 'next/image'
+import cyberiaLogo from "../../../public/logo.svg"
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className={styles.info}>
           <Link href="/">
             <Image
-              src="/logo.svg"
+              src={cyberiaLogo}
               alt="Cyberia"
               className={styles.logo}
               width={130}
