@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,93306,e=>{e.q("/cyberia-task/_next/static/media/feedback.0rabk4xgnm_.3.svg")}]);
